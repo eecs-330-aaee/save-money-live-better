@@ -1,0 +1,107 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+
+a {
+  text-decoration: none;
+}
+
+.logo-container {
+  font-size: 30px;
+  align-content: center;
+  display: block;
+}
+
+.logo {
+  margin: -30px 0 0 0;
+  color: white;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+  padding-left: 30px;
+  color:white;
+}
+
+.navbar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  background-color: #4ECDC4;
+  overflow-x:hidden;
+  padding-top: 20px; 
+  top: 0;
+  left: 0;
+}
+
+.navbar a {
+  padding: 6px 8px 6px 16px;
+  font-size: 22px;
+  color: #F7FFF7;
+  display: block;
+}
+
+.navbar a:hover {
+  color: #FCFFFC;
+}
+
+.main {
+  font-size: 20px;
+  padding: 0;
+  top:0;
+  width: 1280px;
+  padding-left:150px;
+  margin-top:-10px;
+}
+
+.main-background {
+  background-color: #F9F9F9; 
+}
+
+.date-container {
+  position: absolute;
+  bottom: 20px;
+  color:#FFEE9B;
+  display: inline;
+}
+
+#date {
+  color: #FFEE9B;
+  font-size: 19px;
+  padding-left: 16px;
+  margin-top: 10px;
+}
+
+.cal-icon {
+  padding-left: 16px;
+}
+
+.header-bar {
+  background-color: #F7FFF7;
+  overflow: hidden;
+  height:60px;
+}
+
+.header-bar p {
+  float:left;
+  color: darkslategrey;
+  text-align: center;
+  padding-left: 15px;
+  font-size: 24px;
+}
+
+.sign-in {
+  float:right;
+  padding-right:15px;
+  padding-top: 25px;
+}
+
+.sign-in a {
+  font-size: 16px;
+  color: darkslategrey;
+  text-align: center;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;} 
+}
