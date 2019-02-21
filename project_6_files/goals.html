@@ -34,12 +34,35 @@
            <div class="header-bar">
                <p>Goals</p>
            </div>
+           <button class="add-goals-button" onclick = "openForm()">Add Goal</button>
+           <div class="form-popup">
+               <form action="/action_page.php" class="goals-form-container" id="addForm">
+                    <h1>Add Goal</h1>
+
+                    <label for="category"><b>Category</b></label>
+                    <input type="text" placeholder="Enter category" name="category" required>
+
+                    <label for="budget"><b>Budget</b></label>
+                    <input type="budget" placeholder="Enter budget" name="budget" required>
+
+                    <button type="submit" class="btn">Add</button>
+                    <button type="button" class="btn close" onclick="closeForm()">Close</button>
+                </form>
+           </div>
     </div>
 
 
 <script>
     var dt = new Date();
     document.getElementById("date").innerHTML = dt.toLocaleDateString();
+
+    function openForm() {
+        document.getElementById("addForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("addForm").style.display = "none";
+    }
 </script>
 </body>
 </html>
