@@ -175,9 +175,22 @@ a {
   padding:8px;
 }
 
+.goals-page{
+	width: 700px;
+	overflow: hidden;
+}
+.goals-page-column {
+	float:left;
+	width: 350px;
+	height: 500px;
+	border: 1px solid #DDDDDD;
+}
+
 
 /* Add goals form on goals page */
+
 .add-goals-button {
+  margin: 10px 0px 10px 10px;
   padding: 8px;
   background-color: #FF9191;
   color: white;
@@ -198,12 +211,14 @@ a {
   padding: 10px;
   background-color: white;
   display:none;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
 }
 
 .goals-form-container input[type=text]{
-  width: 100%;
+  width: 90%;
   padding: 15px;
-  margin: 5px 0 22px 0;
+  margin: 10px 0 10px 0;
   border: none;
   background: #f1f1f1;
 }
@@ -220,7 +235,7 @@ a {
   border: none;
   cursor: pointer;
   width: 100%;
-  margin-bottom: 10px;
+  margin: 5px 0px 5px 0px;
   opacity: 0.8;
 }
 
@@ -230,4 +245,53 @@ a {
 
 .goals-form-container .btn:hover, .add-goals-button:hover{
   opacity: 1;
+}
+
+.goals-container-header{
+	font-size: 20px;
+	color: gray;
+	float: left;
+	margin: 0 0 0 10px;
+}
+
+.goals-container{   
+    background-color: white;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    padding: 5px 7px 5px;
+	float: right;
+	width: 60%;
+	height:80%;
+	overflow-y:auto;
+    overflow-x:hidden;
+}
+
+.add-goal{
+	background-color:#4ECDC4;
+	opacity: 0.5;
+	border: 1px solid #DDDDDD;
+    border-radius: 4px;
+	width: 100%;
+	height: 20%;
+}
+
+.category-header{
+	text-align: center;
+	color: white;
+	font-size: 16px;
+}
+
+.goal-progress-bar{
+	background-color: white;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+	height: 40%;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.budget{
+	margin-top: 10px;
+	text-align: center;
+	color: black;
+	font-size: 16px;
 }
