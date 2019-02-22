@@ -34,21 +34,32 @@
            <div class="header-bar">
                <p>Goals</p>
            </div>
-           <button class="add-goals-button" onclick = "openForm()">Add Goal</button>
-           <div class="form-popup">
-               <form action="/action_page.php" class="goals-form-container" id="addForm">
-                    <h1>Add Goal</h1>
+			<button class="add-goals-button" onclick = "openForm()">Add Goal</button>
+			<div class="form-popup">
+				<form action="/action_page.php" class="goals-form-container" id="addForm">
+					<h1>Add Goal</h1>
 
-                    <label for="category"><b>Category</b></label>
-                    <input type="text" placeholder="Enter category" name="category" required>
+					<label for="category"><b>Category</b></label>
+					<input type="text" placeholder="Enter category" name="category" required>
 
-                    <label for="budget"><b>Budget</b></label>
-                    <input type="budget" placeholder="Enter budget" name="budget" required>
+					<label for="budget"><b>Budget</b></label>
+					<input type="budget" placeholder="Enter budget" name="budget" required>
 
-                    <button type="submit" class="btn">Add</button>
-                    <button type="button" class="btn close" onclick="closeForm()">Close</button>
-                </form>
-           </div>
+					<button type="button" class="btn add" onclick = "addGoal()">Add</button>
+					<button type="button" class="btn close" onclick="closeForm()">Close</button>
+				</form>
+			</div>
+			<div class="goals-container" id="goals-container">
+				<!--<div class="goals-container-header" id ="goals-empty">
+					<p>Your goals list is empty! Click "Add Goal" to start saving!</p>
+				</div>-->
+				<div class="add-goal">
+					<p class="category-header">Food</p>
+					<div class="goal-progress-bar">
+						<p class="budget">$1500</p>
+					</div>
+				</div>
+			</div>
     </div>
 
 
@@ -63,6 +74,29 @@
     function closeForm() {
         document.getElementById("addForm").style.display = "none";
     }
+	function addGoal() {
+		document.getElementById("addForm").style.display = "none";
+		/*var container = document.getElementById("goals-container");
+		var para = document.createElement("p");
+		var node = document.createTextNode("This is a new paragraph.");
+		para.appendChild(node);
+		container.appendChild(para);*/
+		var container = document.getElementById("goals-container");		
+		var goal = document.createElement('div');
+		var category = document.createElement('p');
+		var bar = document.createElement('div');
+		var budget = document.createElement('p');
+		category.textContent = "Food";
+		budget.textContent = "$1500";
+		goal.setAttribute('class', 'add-goal');
+		category.setAttribute('class', 'category-header');
+		bar.setAttribute('class', 'goal-progress-bar');
+		budget.setAttribute('class', 'budget');
+		bar.appendChild(budget);
+		goal.appendChild(category);
+		goal.appendChild(bar);
+		container.appendChild(goal);
+	}
 </script>
 </body>
 </html>
