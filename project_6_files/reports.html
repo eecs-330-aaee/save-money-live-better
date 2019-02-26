@@ -6,40 +6,82 @@
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+rel="stylesheet">
 <body>
-<!-- Side navigation bar -->
-<div class="navbar">
-        <div class="logo-container">
-            <a href="home.html">
-               <i class="material-icons md-48">monetization_on</i>
-               <div class="logo"><h1>AAEE</h1></div>
-            </a>
-        </div>
-        <a href="transactions.html">Transactions</a>
-        <a href="goals.html">Goals</a>
-        <a href="reports.html">Reports</a>
-        <a href="alerts.html">Alerts</a>
-        <div class="date-container">
-           <div class="cal-icon">
-               <i class="material-icons">calendar_today</i>
-           </div> 
-           <p id="date">Date Placeholder</p>
-        </div>
-</div>
-   
-   <!-- Main page -->
-    <div class="main">
-       <!-- Header bar -->
-           <div class="header-bar">
-               <p>Reports</p>
-           </div>
+  <!-- Side navigation bar -->
+  <div class="navbar">
+    <div class="logo-container">
+      <a href="home.html">
+        <i class="material-icons md-48">monetization_on</i>
+        <div class="logo"><h1>AAEE</h1></div>
+      </a>
+    </div>
+    <a href="transactions.html">Transactions</a>
+    <a href="goals.html">Goals</a>
+    <a href="reports.html">Reports</a>
+    <a href="alerts.html">Alerts</a>
+    <div class="date-container">
+      <div class="cal-icon">
+        <i class="material-icons">calendar_today</i>
+      </div>
+      <p id="date">Date Placeholder</p>
+    </div>
+  </div>
+
+  <!-- Main page -->
+  <div class="main">
+    <!-- Header bar -->
+    <div class="header-bar">
+      <p>Reports</p>
     </div>
 
+    <!-- Interactive Pie Chart -->
+    <div>
+      <p class="report-title">Monthly Statement Report</p>
+      <div id="piechart">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-<script>
-    var dt = new Date();
-    document.getElementById("date").innerHTML = dt.toLocaleDateString();
+        <script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        // Create pie chart and set values
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Categories', 'Expenses ($)'],
+            ['Food', 258],
+            ['Drinks', 140],
+            ['Rent', 800],
+            ['Groceries', 78],
+            ['Clothing', 93],
+            ['Entertainment', 80]
+          ]);
+          // Configurations
+          var options = {
+          //'title':'Pie Chart',
+          'width':750,
+          'height':600,
+          backgroundColor: '#F8F8F8',
+          legend: {'position':'right','alignment':'center'},
+          'chartArea': {'width': '100%', 'height': '70%', 'top': 0, //'left': '50%'
+        }
+        };
+          // Display the chart inside the <div> element with id="piechart"
+          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+          chart.draw(data, options);
+        }
+        </script>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script>
+  var dt = new Date();
+  document.getElementById("date").innerHTML = dt.toLocaleDateString();
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 </script>
 </body>
 </html>
