@@ -1,0 +1,55 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #F8F8F8;
+    height: 100%;
+    margin: 0;
+    font-family: "Lato", sans-serif;
+}
+
+.login-container {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background-color: #4ECDC4;
+    text-align: center;
+}
+
+.login-title {
+    color:darkslategray;
+    font-size: 29px;
+    padding-top: 20px;
+}
+
+.login-form {
+    text-align: left;
+    width: 400px;
+    padding: 20px;
+    color: darkslategray;
+}
+
+input[type=text], input[type=password] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 30px;
+    background-color: #FFEE9B;
+    padding: 10px 14px;
+}
+
+button:hover {
+    opacity: 0.8
+}
