@@ -3,7 +3,6 @@ html {
 }
 
 body {
-    background-color: #F8F8F8;
     height: 100%;
     margin: 0;
     font-family: "Lato", sans-serif;
@@ -18,8 +17,8 @@ body {
     left: 0;
     width: 400px;
     height: 400px;
-    background-color: #4ECDC4;
     text-align: center;
+    border: 3px solid #4ECDC4;
 }
 
 .login-title {
