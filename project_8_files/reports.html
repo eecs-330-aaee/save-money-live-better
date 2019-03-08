@@ -33,6 +33,9 @@ rel="stylesheet">
     <!-- Header bar -->
     <div class="header-bar">
       <p>Reports</p>
+      <div class="sign-in">
+                <a href="login.html">Sign out</a>
+            </div>
     </div>
 
     <!-- Interactive Pie Chart -->
@@ -45,7 +48,6 @@ rel="stylesheet">
         // Load google charts
         google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart);
-
         // Create pie chart and set values
         function drawChart() {
           var data = google.visualization.arrayToDataTable([
@@ -57,7 +59,6 @@ rel="stylesheet">
             ['Clothing', 93],
             ['Entertainment', 80]
           ]);
-
           // Configurations
           var options = {
           //'title':'Pie Chart',
@@ -68,7 +69,6 @@ rel="stylesheet">
           'chartArea': {'width': '100%', 'height': '70%', 'top': 0, //'left': '50%'
         }
         };
-
           // Display the chart inside the <div> element with id="piechart"
           var chart = new google.visualization.PieChart(document.getElementById('piechart'));
           chart.draw(data, options);
