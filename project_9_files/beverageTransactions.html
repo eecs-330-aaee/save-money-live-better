@@ -37,38 +37,54 @@ rel="stylesheet">
 
     <!--  Transactions -->
     <div class="row">
+
+      <!--  date -->
+      <div class="column column-one">
+        <b><span class="trans_header">Date</span></b>
+        <p><span class="date">3/9/19</span></p>
+        <p><span class="date">3/6/19</span></p>
+        <p><span class="date">3/4/19</span></p>
+        <p><span class="date">3/3/19</span></p>
+        <br>
+        <span class="totalprice"><b>Total</b></span>
+      </div>
+
       <!--  purchase -->
-      <div class="column column-left">
+      <div class="column column-two">
+        <b><span class="trans_header">Place</span></b>
         <p><span class="purchase">Starbucks</span></p>
         <p><span class="purchase">Jamba Juice</span></p>
         <p><span class="purchase">Starbucks</span></p>
         <p><span class="purchase">Starbucks</span></p>
-
-        <p><b>Total</b></p>
       </div>
       <!-- category -->
-      <div class="  column-center">
+      <div class="column column-three">
+        <b><span class="trans_header">Category</span></b>
         <p><span class="category">Beverage</span></p>
         <p><span class="category">Beverage</span></p>
         <p><span class="category">Beverage</span></p>
         <p><span class="category">Beverage</span></p>
       </div>
       <!-- price -->
-      <div class="column column-right">
+      <div class="column column-four">
+        <b><span class="trans_header">Expense</span></b>
         <p><span class="price">$8</span></p>
         <p><span class="price">$6</span></p>
         <p><span class="price">$8</span></p>
         <p><span class="price">$18</span></p>
-
-        <span class="totalprice"><b>$40</b></span>
+        <br>
+      <span class="totalprice"><b>$40</b></span>
       </div>
     </div>
 
-
     <!--  Sort By Button -->
     <div>
-      <button class="open-button" onclick="openButton()">Organize by</button>
-      <div class="button-popup" id="myButton">
+      <button class="open-button1" onclick="openButton1()">Select Category</button>
+      <button class="open-button2" onclick="openButton2()">Select Multiple Categories</button>
+
+
+      <div class="button-popup" id="myButton1">
+
         <form action="/action_page.php" class="button-container">
           <p><a href="transactions.html">All Transactions</a></p>
           <p><a href="beverageTransactions.html">Beverage</a></p>
@@ -76,29 +92,55 @@ rel="stylesheet">
           <p><a href="foodTransactions.html">Food</a></p>
           <p><a href="groceriesTransactions.html">Groceries</a></p>
           <p><a href="rentTransactions.html">Rent</a></p>
+          <button type="button" class="btn cancel" onclick="closeButton1()">Close</button>
+        </form>
+      </div>
 
-          <button type="button" class="btn cancel" onclick="closeButton()">Close</button>
+
+      <div class="button-popup" id="myButton2">
+        <form action="/action_page.php" class="button-container buttonCategory">
+          <input type="checkbox" value=<p> All Transactions</p>
+          <input type="checkbox" value=<p> Beverage</p>
+          <input type="checkbox" value=<p> Entertainment</p>
+          <input type="checkbox" value=<p> Food</p>
+          <input type="checkbox" value=<p> Groceries</p>
+          <input type="checkbox" value=<p> Rent</p>
+
+          <a href="food&groceriesTransactions.html">
+            <button type="button" class="btn select" onclick="selectButton()">Select</button>
+          </a>
+
+
+          <button type="button" class="btn cancel" onclick="closeButton2()">Close</button>
         </form>
       </div>
     </div>
 
     <script>
-    function openButton() {
-      document.getElementById("myButton").style.display = "block";
+    function openButton1() {
+      document.getElementById("myButton1").style.display = "block";
     }
 
-    function closeButton() {
-      document.getElementById("myButton").style.display = "none";
+    function openButton2() {
+      document.getElementById("myButton2").style.display = "block";
     }
+
+    function closeButton1() {
+      document.getElementById("myButton1").style.display = "none";
+    }
+
+    function closeButton2() {
+      document.getElementById("myButton2").style.display = "none";
+    }
+
     </script>
-
-
   </div>
+</div>
 
 
-  <script>
-  var dt = new Date();
-  document.getElementById("date").innerHTML = dt.toLocaleDateString();
+<script>
+var dt = new Date();
+document.getElementById("date").innerHTML = dt.toLocaleDateString();
 </script>
 </body>
 </html>
