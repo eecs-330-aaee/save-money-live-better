@@ -196,6 +196,7 @@ a {
   background-color: #FF9191;
   color: white;
   font-size: 15px;
+  border-radius: 4px;
 }
 
 .goals-form-popup {
@@ -331,8 +332,6 @@ a {
   clear: both;
 }
 
-
-
 .open-button {
   background-color: #555;
   color: white;
@@ -399,4 +398,184 @@ a {
 /* Add some hover effects to buttons */
 .button-container .btn:hover, .open-button:hover {
   opacity: 1;
+}
+
+/*Alerts section*/
+
+.alerts-container {
+	width: 100%;
+	height: 100%;
+}
+
+.alerts-left{
+	float: left;
+	width: 40%;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-left: 50px;
+	padding-top: 30px;
+	padding-right: 10px;
+}
+
+.alerts-right{
+	float:right;
+	width: 45%;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-right: 10px;
+	padding-top: 30px;
+
+}
+.alert-row-container{
+	border: 1px solid #f1f1f1;
+	border-radius: 4px;
+}
+
+.alert-row{
+	height: 40px;
+	border-bottom: 1px solid #f1f1f1;
+	display: inline-block;
+	padding: 3px 5px 3px 10px;
+	width: 100%;
+
+}
+
+.alert-sheader{
+	font-size: 18px;
+	color: black;
+}
+
+
+.alert-setting-type{
+	font-size: 15px;
+	color: black;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  float: right;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  right: 15px;
+  bottom: 45px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.frequency {
+	display:inline-block;
+	position: relative;
+	bottom: 38px;
+	left: 150px;
+}
+
+.alerts-history-container {
+	background-color: white;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    padding: 15px 10px 15px 10px;
+	/*float: right;*/
+	width: 100%;
+	height: 80%;
+	overflow-y:auto;
+    overflow-x:hidden;
+}
+
+.alert-goal {
+	background-color:#4ECDC4;
+	opacity: 0.5;
+	border: 1px solid #DDDDDD;
+    border-radius: 4px;
+	width: 100%;
+	height: 15%;
+	margin: 5px 5px 5px 5px;
+}
+
+.alert-alt {
+	background-color:#FF9191;
+	opacity: 0.5;
+	border: 1px solid #DDDDDD;
+    border-radius: 4px;
+	width: 100%;
+	height: 15%;
+	margin: 5px 5px 5px 5px;
+}
+
+.alert-encourage {
+	background-color:#92defc;
+	opacity: 0.5;
+	border: 1px solid #DDDDDD;
+    border-radius: 4px;
+	width: 100%;
+	height: 15%;
+	margin: 5px 5px 5px 5px;
+}
+
+.alert-text{
+	text-align: center;
+	color: black;
+	font-size: 18px;
+}
+
+.alert-date{
+	text-align: center;
+	color: gray;
+	font-size: 10px;
 }
