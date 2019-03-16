@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html>
+<title>Transactions: Food</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet">
+<body>
+  <!-- Side navigation bar -->
+  <div class="navbar">
+    <div class="logo-container">
+      <a href="home.html">
+        <i class="material-icons md-48">monetization_on</i>
+        <div class="logo"><h1>AAEE</h1></div>
+      </a>
+    </div>
+    <a href="transactions.html">Transactions</a>
+    <a href="goals.html">Goals</a>
+    <a href="reports.html">Monthly Report</a>
+    <a href="alerts.html">Alerts</a>
+    <div class="date-container">
+      <div class="cal-icon">
+        <i class="material-icons">calendar_today</i>
+      </div>
+      <p id="date">Date Placeholder</p>
+    </div>
+  </div>
+
+  <!-- Main page -->
+  <div class="main">
+    <!-- Header bar -->
+    <div class="header-bar">
+      <p>Transactions: Food</p>
+    </div>
+    <!--  Transactions -->
+    <div class="row">
+      <!--  dates -->
+      <div class="column column-one">
+        <b><span class="trans_header">Date</span></b>
+        <p><span class="date">3/10/19</span></p>
+        <p><span class="date">3/8/19</span></p>
+        <p><span class="date">3/8/19</span></p>
+        <p><span class="date">3/5/19</span></p>
+        <p><span class="date">3/5/19</span></p>
+        <p><span class="date">3/4/19</span></p>
+        <br>
+        <span class="totalprice"><b>Total</b></span>
+      </div>
+      <!--  purchase -->
+      <div class="column column-two">
+        <b><span class="trans_header">Place</span></b>
+        <p><span class="purchase">Chipotle</span></p>
+        <p><span class="purchase">Lisa's Cafe</span></p>
+        <p><span class="purchase">Joy Yee</span></p>
+        <p><span class="purchase">Lisa's Cafe</span></p>
+        <p><span class="purchase">Siam Pasta</span></p>
+        <p><span class="purchase">Lisa's Cafe</span></p>
+      </div>
+      <!-- category -->
+      <div class="column column-three">
+        <b><span class="trans_header">Category</span></b>
+        <p><span class="category">Food</span></p>
+        <p><span class="category">Food</span></p>
+        <p><span class="category">Food</span></p>
+        <p><span class="category">Food</span></p>
+        <p><span class="category">Food</span></p>
+        <p><span class="category">Food</span></p>
+
+      </div>
+      <!-- price -->
+      <div class="column column-four">
+        <b><span class="trans_header">Expense</span></b>
+        <p><span class="price">$5</span></p>
+        <p><span class="price">$2</span></p>
+        <p><span class="price">$48</span></p>
+        <p><span class="price">$13</span></p>
+        <p><span class="price">$12</span></p>
+        <p><span class="price">$6</span></p>
+        <br>
+        <span class="totalprice"><b>$86</b></span>
+      </div>
+    </div>
+  </div>
+
+  <!--  Sort By Button -->
+  <div>
+    <button class="open-button1" onclick="openButton1()">Select Category</button>
+    <button class="open-button2" onclick="openButton2()">Select Multiple Categories</button>
+
+
+    <div class="button-popup" id="myButton1">
+
+      <form action="/action_page.php" class="button-container">
+        <p><a href="transactions.html">All Transactions</a></p>
+        <p><a href="beverageTransactions.html">Beverage</a></p>
+        <p><a href="entertainmentTransactions.html">Entertainment</a></p>
+        <p><a href="foodTransactions.html">Food</a></p>
+        <p><a href="groceriesTransactions.html">Groceries</a></p>
+        <p><a href="rentTransactions.html">Rent</a></p>
+        <button type="button" class="btn cancel" onclick="closeButton1()">Close</button>
+      </form>
+    </div>
+
+
+    <div class="button-popup" id="myButton2">
+      <form action="/action_page.php" class="button-container buttonCategory">
+        <input type="checkbox" value=<p> All Transactions</p>
+        <input type="checkbox" value=<p> Beverage</p>
+        <input type="checkbox" value=<p> Entertainment</p>
+        <input type="checkbox" value=<p> Food</p>
+        <input type="checkbox" value=<p> Groceries</p>
+        <input type="checkbox" value=<p> Rent</p>
+
+        <a href="food&groceriesTransactions.html">
+          <button type="button" class="btn select" onclick="selectButton()">Select</button>
+        </a>
+
+
+        <button type="button" class="btn cancel" onclick="closeButton2()">Close</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+  function openButton1() {
+    document.getElementById("myButton1").style.display = "block";
+  }
+
+  function openButton2() {
+    document.getElementById("myButton2").style.display = "block";
+  }
+
+  function closeButton1() {
+    document.getElementById("myButton1").style.display = "none";
+  }
+
+  function closeButton2() {
+    document.getElementById("myButton2").style.display = "none";
+  }
+
+  </script>
+</div>
+</div>
+
+
+<script>
+var dt = new Date();
+document.getElementById("date").innerHTML = dt.toLocaleDateString();
+</script>
+</body>
+</html>
